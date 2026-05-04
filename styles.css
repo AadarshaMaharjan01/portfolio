@@ -98,13 +98,32 @@ main {
   margin: 0 auto;
 }
 
+.hero-stage {
+  min-height: calc(100vh + 390px);
+}
+
+.about-stage {
+  min-height: calc(82vh + 260px);
+}
+
 .hero {
+  position: sticky;
+  top: var(--header-height, 74px);
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.82fr);
   align-items: center;
   gap: 44px;
-  min-height: calc(100vh - 74px);
+  min-height: calc(100vh - var(--header-height, 74px));
   padding: 42px 0 74px;
+}
+
+.about-stage .about {
+  position: sticky;
+  top: var(--header-height, 74px);
+  min-height: min(620px, calc(82vh - var(--header-height, 74px)));
+  align-content: center;
+  gap: 30px;
+  padding: 56px 0;
 }
 
 .eyebrow {
@@ -149,6 +168,48 @@ h3 {
   margin: 24px 0 0;
   color: var(--muted);
   font-size: 1.12rem;
+}
+
+.js .scroll-fade {
+  opacity: var(--reveal-opacity, 0);
+  transform: translateY(var(--reveal-lift, 22px));
+  transition:
+    opacity 120ms linear,
+    transform 120ms linear;
+  will-change: opacity, transform;
+}
+
+.js .step-one {
+  --reveal-opacity: var(--hero-reveal-one, 0);
+  --reveal-lift: calc((1 - var(--hero-reveal-one, 0)) * 22px);
+}
+
+.js .step-two {
+  --reveal-opacity: var(--hero-reveal-two, 0);
+  --reveal-lift: calc((1 - var(--hero-reveal-two, 0)) * 24px);
+}
+
+.js .step-three {
+  --reveal-opacity: var(--hero-reveal-three, 0);
+  --reveal-lift: calc((1 - var(--hero-reveal-three, 0)) * 28px);
+}
+
+.js .about-step-one {
+  --reveal-opacity: var(--about-reveal-one, 0);
+  --reveal-lift: calc((1 - var(--about-reveal-one, 0)) * 24px);
+}
+
+.js .about-step-two {
+  --reveal-opacity: var(--about-reveal-two, 0);
+  --reveal-lift: calc((1 - var(--about-reveal-two, 0)) * 28px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .scroll-fade {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .hero-actions,
