@@ -1,0 +1,29 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Layered portfolio project preview</title>
+  <desc id="desc">Abstract interface panels showing project cards, code lines, and profile details.</desc>
+  <rect width="900" height="1100" fill="#DBE8D3"/>
+  <rect x="70" y="82" width="760" height="936" rx="28" fill="#FBFAF7" stroke="#161616" stroke-width="3"/>
+  <rect x="120" y="144" width="260" height="260" rx="18" fill="#0B6B6F"/>
+  <rect x="152" y="176" width="196" height="22" rx="11" fill="#FBFAF7"/>
+  <rect x="152" y="224" width="142" height="22" rx="11" fill="#FBFAF7" fill-opacity=".78"/>
+  <circle cx="224" cy="318" r="48" fill="#F4D8CA"/>
+  <rect x="430" y="144" width="350" height="84" rx="18" fill="#161616"/>
+  <rect x="464" y="176" width="210" height="18" rx="9" fill="#FBFAF7"/>
+  <rect x="430" y="258" width="350" height="146" rx="18" fill="#F4D8CA"/>
+  <rect x="464" y="298" width="244" height="16" rx="8" fill="#161616"/>
+  <rect x="464" y="334" width="186" height="16" rx="8" fill="#161616" fill-opacity=".65"/>
+  <rect x="120" y="468" width="660" height="152" rx="18" fill="#FFFFFF" stroke="#D8D6CF" stroke-width="3"/>
+  <rect x="162" y="516" width="180" height="18" rx="9" fill="#D6512B"/>
+  <rect x="162" y="558" width="390" height="18" rx="9" fill="#161616" fill-opacity=".68"/>
+  <rect x="162" y="592" width="284" height="18" rx="9" fill="#161616" fill-opacity=".38"/>
+  <rect x="120" y="664" width="308" height="236" rx="18" fill="#161616"/>
+  <rect x="158" y="708" width="168" height="18" rx="9" fill="#FBFAF7"/>
+  <rect x="158" y="754" width="216" height="16" rx="8" fill="#DBE8D3"/>
+  <rect x="158" y="790" width="142" height="16" rx="8" fill="#DBE8D3" fill-opacity=".72"/>
+  <rect x="472" y="664" width="308" height="236" rx="18" fill="#0B6B6F"/>
+  <rect x="510" y="708" width="168" height="18" rx="9" fill="#FBFAF7"/>
+  <rect x="510" y="754" width="216" height="16" rx="8" fill="#F4D8CA"/>
+  <rect x="510" y="790" width="142" height="16" rx="8" fill="#F4D8CA" fill-opacity=".72"/>
+  <path d="M660 911C717.99 911 765 863.99 765 806C765 748.01 717.99 701 660 701C602.01 701 555 748.01 555 806C555 863.99 602.01 911 660 911Z" fill="#D6512B" fill-opacity=".22"/>
+  <path d="M254 853L290 790L326 853H254Z" fill="#D6512B"/>
+</svg>
