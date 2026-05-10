@@ -49,6 +49,7 @@ const updateAboutReveal = () => {
 
   root.style.setProperty("--about-reveal-one", revealWithinStage(aboutStage, -220, -20).toFixed(3));
   root.style.setProperty("--about-reveal-two", revealWithinStage(aboutStage, -85, 80).toFixed(3));
+  root.style.setProperty("--about-reveal-three", revealWithinStage(aboutStage, 30, 165).toFixed(3));
 };
 
 updateHeaderHeight();
