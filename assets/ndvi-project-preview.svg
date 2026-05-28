@@ -1,0 +1,22 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">NDVI plant health preview</title>
+  <desc id="desc">A stylized plant, Raspberry Pi board, and NDVI image processing preview.</desc>
+  <rect width="900" height="620" fill="#DBE8D3"/>
+  <rect x="58" y="66" width="784" height="488" rx="26" fill="#FBFAF7" stroke="#161616" stroke-width="4"/>
+  <rect x="102" y="112" width="286" height="246" rx="20" fill="#0B6B6F"/>
+  <circle cx="172" cy="182" r="18" fill="#161616"/>
+  <circle cx="318" cy="182" r="18" fill="#161616"/>
+  <rect x="152" y="238" width="190" height="42" rx="12" fill="#DBE8D3"/>
+  <rect x="190" y="298" width="114" height="16" rx="8" fill="#FBFAF7"/>
+  <path d="M528 391C626.307 391 706 311.307 706 213C706 114.693 626.307 35 528 35C429.693 35 350 114.693 350 213C350 311.307 429.693 391 528 391Z" fill="#F4D8CA"/>
+  <path d="M530 418C530 418 410 329 430 212C447 112 530 90 530 90C530 90 613 112 630 212C650 329 530 418 530 418Z" fill="#0B6B6F"/>
+  <path d="M530 418V120" stroke="#FBFAF7" stroke-width="16" stroke-linecap="round"/>
+  <path d="M530 260C482 232 452 196 438 144" stroke="#FBFAF7" stroke-width="14" stroke-linecap="round"/>
+  <path d="M530 318C586 282 612 236 622 176" stroke="#FBFAF7" stroke-width="14" stroke-linecap="round"/>
+  <rect x="102" y="396" width="286" height="92" rx="18" fill="#161616"/>
+  <rect x="142" y="428" width="166" height="14" rx="7" fill="#FBFAF7"/>
+  <rect x="142" y="460" width="104" height="14" rx="7" fill="#DBE8D3"/>
+  <rect x="568" y="414" width="230" height="74" rx="18" fill="#D6512B"/>
+  <rect x="602" y="442" width="130" height="14" rx="7" fill="#FBFAF7"/>
+  <rect x="602" y="470" width="84" height="14" rx="7" fill="#FBFAF7" fill-opacity=".72"/>
+</svg>
