@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aadarsha Maharjan project case study: Capture plant health with NDVI and Raspberry Pi."
+    />
+    <title>Plant Health with NDVI | Aadarsha Maharjan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Aadarsha Maharjan home">
+        <span class="brand-mark">AM</span>
+        <span>Aadarsha Maharjan</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Project navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div>
+          <p class="eyebrow">Project Case Study</p>
+          <h1>Capture plant health with NDVI and Raspberry Pi.</h1>
+          <p class="project-lede">
+            This project explored how plant health can be studied with NDVI, a vegetation index
+            that compares near-infrared and red light from plant images. The goal was to understand
+            the hardware, image capture process, and image processing steps behind plant health
+            analysis.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="https://projects.raspberrypi.org/en/projects/astropi-ndvi/6"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Raspberry Pi Guide
+            </a>
+            <a class="button secondary" href="index.html#projects">Back to Portfolio</a>
+          </div>
+        </div>
+        <div class="project-hero-image">
+          <img src="assets/ndvi-project-preview.svg" alt="NDVI plant health project preview" />
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="overview-title">
+        <div>
+          <p class="eyebrow">Overview</p>
+          <h2 id="overview-title">What this project is about.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            NDVI stands for Normalized Difference Vegetation Index. It is used to estimate plant
+            health by comparing how plants reflect red light and near-infrared light. Healthy
+            plants usually absorb more red light for photosynthesis and reflect more near-infrared
+            light.
+          </p>
+          <p>
+            In this project, I was able to work though the idea of using a Raspberry Pi camera setup to capture a plant image. 
+            Then process the image date to create an output that helps show the health and condion of the plant 
+          </p>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="how-title">
+        <div>
+          <p class="eyebrow">How It Works</p>
+          <h2 id="how-title">From image capture to plant health.</h2>
+        </div>
+        <div class="detail-copy">
+          <ol class="process-list">
+            <li>Capture plant images using a Raspberry Pi camera setup.</li>
+            <li>Use filtering or camera modification to capture useful light information.</li>
+            <li>Process the image so red and near-infrared information can be compared.</li>
+            <li>Calculate NDVI with the formula: <strong>(NIR - Red) / (NIR + Red)</strong>.</li>
+            <li>Use the processed image to observe which plant areas appear healthier or stressed.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="components-title">
+        <div>
+          <p class="eyebrow">Components</p>
+          <h2 id="components-title">Tools and materials.</h2>
+        </div>
+        <div class="component-grid">
+          <span>Raspberry Pi</span>
+          <span>Camera module</span>
+          <span>Plant sample</span>
+          <span>Image processing</span>
+          <span>NDVI formula</span>
+          <span>Documentation photos</span>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="photos-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Documentation</p>
+            <h2 id="photos-title">Photos and results</h2>
+          </div>
+        </div>
+
+        <div class="photo-grid">
+          <figure>
+            <img src="assets/ndvi-project-preview.svg" alt="Placeholder for Raspberry Pi setup" />
+            <figcaption>Raspberry Pi setup photo goes here.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/ndvi-project-preview.svg" alt="Placeholder for plant image capture" />
+            <figcaption>Plant image capture photo goes here.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/ndvi-project-preview.svg" alt="Placeholder for NDVI output image" />
+            <figcaption>Processed NDVI result photo goes here.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="reflection-title">
+        <div>
+          <p class="eyebrow">Reflection</p>
+          <h2 id="reflection-title">Issues I faced and what I learned.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            One challenge was understanding how the camera and filters affect what light is actually
+            captured. Another was learning that image quality, lighting, and contrast can change how
+            clear the final result looks.
+            There were a couple of challenges that i had but a lot of them stem from understanding how the camerea and filters work together and how they can affect what light is acaully being caputre.
+            Another thing that learning and unders that the image quaility, lighht eniverment, background items, focus, distance and contrast can all play in a facotrhow clear the final results look. 
+          </p>
+          <p>
+            
+            This project helped me bridge the gap between, hardware, imaging, and programming ideas all togethor. 
+            It also showed me that engineering projects require a lot of patience, time, testing, adjusting and documenting 
+            each step before the result becomes reliable. 
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Aadarsha Maharjan. Built with care.</p>
+      <a href="index.html">Back to portfolio</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
