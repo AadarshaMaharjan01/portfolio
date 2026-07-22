@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aadarsha Maharjan project case study: C/C++ Arduino ultrasonic radar system with servo scanning, embedded hardware feedback, and Processing visualization."
+    />
+    <title>Ultrasonic Radar System | Aadarsha Maharjan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Aadarsha Maharjan home">
+        <span class="brand-mark">AM</span>
+        <span>Aadarsha Maharjan</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Project navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div>
+          <p class="eyebrow">Project Case Study</p>
+          <h1>Ultrasonic radar system with live object detection.</h1>
+          <p class="project-lede">
+            This project is an Arduino-based embedded system that scans its surroundings using an
+            ultrasonic sensor mounted on a sweeping servo motor. It gives real-time feedback through
+            LEDs, an LCD display, a buzzer, and a custom PC radar visualization built in Processing.
+            I coded the main embedded radar system in C with some C++, which controlled the sensor
+            timing, servo movement, hardware outputs, and serial data stream.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="assets/docs/ultrasonic-radar-system.pdf" target="_blank" rel="noreferrer">
+              View Documentation
+            </a>
+            <a class="button secondary" href="index.html#projects">Back to Portfolio</a>
+          </div>
+        </div>
+        <div class="project-hero-image">
+          <img src="assets/ultrasonic-radar-preview.svg" alt="Ultrasonic radar system preview" />
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="overview-title">
+        <div>
+          <p class="eyebrow">Overview</p>
+          <h2 id="overview-title">What this project does.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            The system uses an HC-SR04 ultrasonic sensor to detect nearby objects while an SG90
+            servo motor sweeps the sensor across an arc. The Arduino measures distance, updates
+            hardware feedback, and streams angle-distance data to a computer.
+          </p>
+          <p>
+            The most important part of my work was coding the embedded system logic in C/C++ on the
+            Arduino. That code connects the hardware pieces together: it reads the ultrasonic sensor,
+            moves the servo, controls the LEDs and buzzer, updates the LCD, and sends structured
+            data to the radar visualization.
+          </p>
+          <p>
+            On the computer side, a Processing sketch reads the serial data and renders a live
+            half-circle radar display with a sweep beam, distance rings, angle markers, and object
+            dots that briefly persist before fading out.
+          </p>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="how-title">
+        <div>
+          <p class="eyebrow">How It Works</p>
+          <h2 id="how-title">Sensor data becomes a live radar display.</h2>
+        </div>
+        <div class="detail-copy">
+          <ol class="process-list">
+            <li>The servo motor sweeps the ultrasonic sensor back and forth across about 170 degrees.</li>
+            <li>At each angle, the Arduino sends a pulse and measures how long the echo takes to return.</li>
+            <li>The Arduino converts the echo timing into distance in centimeters.</li>
+            <li>LEDs, the buzzer, and the LCD update based on whether the object is far, medium, or close.</li>
+            <li>The angle and distance are streamed to Processing for the live radar visualization.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="components-title">
+        <div>
+          <p class="eyebrow">Components</p>
+          <h2 id="components-title">Hardware and software used.</h2>
+        </div>
+        <div class="component-grid">
+          <span>Arduino Uno</span>
+          <span>HC-SR04 ultrasonic sensor</span>
+          <span>SG90 servo motor</span>
+          <span>Red, yellow, and green LEDs</span>
+          <span>220 ohm resistors</span>
+          <span>Active buzzer</span>
+          <span>LCD1602 display</span>
+          <span>Potentiometer</span>
+          <span>Breadboard and jumper wires</span>
+          <span>Arduino IDE</span>
+          <span>C/C++ programming</span>
+          <span>Embedded systems</span>
+          <span>Processing</span>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="files-title">
+        <div>
+          <p class="eyebrow">Files</p>
+          <h2 id="files-title">Code and documentation.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            The main project code is the Arduino sketch, which I wrote mostly in C with some C++.
+            It controls the sensor, servo, LEDs, buzzer, and LCD while sending clean angle-distance
+            data over serial. The Processing sketch reads that serial data from the Arduino and
+            draws the live radar interface on the computer.
+          </p>
+          <div class="component-grid">
+            <span>ultrasonic_radar.ino</span>
+            <span>radar_display.pde</span>
+            <a class="button secondary" href="assets/docs/ultrasonic-radar-system.pdf" target="_blank" rel="noreferrer">
+              Open Project PDF
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="reflection-title">
+        <div>
+          <p class="eyebrow">Reflection</p>
+          <h2 id="reflection-title">What I learned.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            This project helped me practice embedded systems programming: reading sensor data with
+            precise pulse timing, controlling a servo motor, building multi-output logic, and sending
+            structured data between two independent programs.
+          </p>
+          <p>
+            I also debugged real hardware and software issues, including wiring shorts, component
+            polarity, serial port conflicts, and logic errors. Future improvements could include a
+            second sensor, wider scan coverage, or logging detection data for later analysis.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Aadarsha Maharjan. Built with care.</p>
+      <a href="index.html">Back to portfolio</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
