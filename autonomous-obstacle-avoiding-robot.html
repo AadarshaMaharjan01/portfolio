@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Aadarsha Maharjan project case study: Arduino autonomous obstacle-avoiding robot using ultrasonic sensing, servo scanning, and C/C++ embedded systems logic."
+    />
+    <title>Autonomous Obstacle-Avoiding Robot | Aadarsha Maharjan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Aadarsha Maharjan home">
+        <span class="brand-mark">AM</span>
+        <span>Aadarsha Maharjan</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Project navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div>
+          <p class="eyebrow">Project Case Study</p>
+          <h1>Autonomous obstacle-avoiding robot that chooses its path.</h1>
+          <p class="project-lede">
+            This project is a 4WD Arduino robot that drives forward on its own, detects obstacles
+            with an ultrasonic sensor mounted on a sweeping servo, and decides which direction to
+            turn by scanning for the most open path. I built it using C/C++ embedded systems logic
+            and hardware lessons from my earlier ultrasonic radar project.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="autonomous-obstacle-avoiding-robot.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Documentation
+            </a>
+            <a class="button secondary" href="index.html#projects">Back to Portfolio</a>
+          </div>
+        </div>
+        <div class="project-hero-image">
+          <img
+            src="assets/autonomous-robot-preview.svg"
+            alt="Autonomous obstacle-avoiding robot preview"
+          />
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="overview-title">
+        <div>
+          <p class="eyebrow">Overview</p>
+          <h2 id="overview-title">What this project does.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            The robot uses an HC-SR04 ultrasonic sensor to detect objects in its path. When an
+            obstacle is within about 32 centimeters, the robot stops, backs up, scans the area, and
+            turns toward the clearest direction.
+          </p>
+          <p>
+            Instead of making the same turn over and over, the robot compares distance readings
+            across a servo sweep and chooses the angle with the largest distance. That makes the
+            movement more intentional and efficient.
+          </p>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="how-title">
+        <div>
+          <p class="eyebrow">How It Works</p>
+          <h2 id="how-title">A scan, compare, and turn algorithm.</h2>
+        </div>
+        <div class="detail-copy">
+          <ol class="process-list">
+            <li>The robot starts by driving forward autonomously.</li>
+            <li>If an obstacle is detected within about 32 cm, it stops and backs up.</li>
+            <li>The servo sweeps the ultrasonic sensor from 5 degrees to 175 degrees.</li>
+            <li>The Arduino records distance readings at every 5 degree step.</li>
+            <li>The code tracks the best distance and best angle found during the scan.</li>
+            <li>The robot pivots toward that angle, re-centers the sensor, and resumes driving.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="components-title">
+        <div>
+          <p class="eyebrow">Components</p>
+          <h2 id="components-title">Hardware and software used.</h2>
+        </div>
+        <div class="component-grid">
+          <span>Arduino Uno</span>
+          <span>4WD acrylic chassis</span>
+          <span>4x TT gear motors</span>
+          <span>L298N motor driver</span>
+          <span>HC-SR04 ultrasonic sensor</span>
+          <span>SG90 servo motor</span>
+          <span>Pushbutton on/off toggle</span>
+          <span>Battery pack</span>
+          <span>Arduino IDE</span>
+          <span>C/C++ programming</span>
+          <span>Embedded systems</span>
+          <span>Robotics</span>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="learning-title">
+        <div>
+          <p class="eyebrow">Learning</p>
+          <h2 id="learning-title">What I practiced.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            This project helped me practice controlling DC motors through an L298N H-bridge,
+            building a simple C state machine, and using a loop to run a self-contained servo scan.
+          </p>
+          <p>
+            I also used a search-style comparison pattern with persistent variables like
+            <strong>bestDistance</strong> and <strong>bestAngle</strong> to track the clearest path
+            during each scan.
+          </p>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="challenges-title">
+        <div>
+          <p class="eyebrow">Challenges</p>
+          <h2 id="challenges-title">Issues I faced and solved.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            Wiring the L298N motor driver was more complicated than expected because I needed to
+            control four motors with a dual-channel driver. I tested motor pairs, adjusted wiring,
+            and worked out the correct direction logic.
+          </p>
+          <p>
+            I also debugged reversed motor direction, a pin conflict between the servo library and
+            motor control pins, shared power and ground requirements, stale sensor readings, and a
+            mid-scan turning bug caused by turning before the scan had finished.
+          </p>
+        </div>
+      </section>
+
+      <section class="section project-detail-grid" aria-labelledby="files-title">
+        <div>
+          <p class="eyebrow">Files</p>
+          <h2 id="files-title">Documentation.</h2>
+        </div>
+        <div class="detail-copy">
+          <p>
+            The project documentation includes the system overview, hardware list, software
+            approach, setup notes, lessons learned, challenges, and future improvements.
+          </p>
+          <div class="component-grid">
+            <a
+              class="button secondary"
+              href="autonomous-obstacle-avoiding-robot.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Project PDF
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Aadarsha Maharjan. Built with care.</p>
+      <a href="index.html">Back to portfolio</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
